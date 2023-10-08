@@ -3,10 +3,10 @@
     <div class="container">
       <div class="heading_container heading_center">
         <h2>
-          Testimonial
+          Avaliações
         </h2>
         <p>
-          Even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to
+          Mesmo um pouco crível. Se você for usar uma passagem de Lorem Ipsum
         </p>
       </div>
     </div>
@@ -18,6 +18,7 @@
               <div class="row">
                 <div class="col-md-10 mx-auto">
                   <div class="box">
+                    {% for c in clientes %}
                     <div class="img-box">
                       <img src="{% static "images/client.jpg" %}" alt="">
                     </div>
@@ -25,109 +26,27 @@
                       <div class="client_info">
                         <div class="client_name">
                           <h5>
-                            Morojink
+                            {{ c.nome }}
                           </h5>
                           <h6>
-                            Customer
+                            {{ c.plano }}
                           </h6>
                         </div>
                         <i class="fa fa-quote-left" aria-hidden="true"></i>
                       </div>
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum
-                        dolore eu fugia
+                        {{ c.avaliacao }}
                       </p>
                     </div>
+                    {% endfor %}
                   </div>
+                  
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-10 mx-auto">
-                  <div class="box">
-                    <div class="img-box">
-                      <img src="{% static "images/client.jpg" %}" alt="">
-                    </div>
-                    <div class="detail-box">
-                      <div class="client_info">
-                        <div class="client_name">
-                          <h5>
-                            Morojink
-                          </h5>
-                          <h6>
-                            Customer
-                          </h6>
-                        </div>
-                        <i class="fa fa-quote-left" aria-hidden="true"></i>
-                      </div>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum
-                        dolore eu fugia
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-10 mx-auto">
-                  <div class="box">
-                    <div class="img-box">
-                      <img src="{% static "images/client.jpg" %}" alt="">
-                    </div>
-                    <div class="detail-box">
-                      <div class="client_info">
-                        <div class="client_name">
-                          <h5>
-                            Morojink
-                          </h5>
-                          <h6>
-                            Customer
-                          </h6>
-                        </div>
-                        <i class="fa fa-quote-left" aria-hidden="true"></i>
-                      </div>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum
-                        dolore eu fugia
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                
               </div>
             </div>
           </div>
         </div>
-        <div class="carousel_btn-box">
-          <a class="carousel-control-prev" href="#customCarousel2" role="button" data-slide="prev">
-            <i class="fa fa-angle-left" aria-hidden="true"></i>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#customCarousel2" role="button" data-slide="next">
-            <i class="fa fa-angle-right" aria-hidden="true"></i>
-            <span class="sr-only">Next</span>
-          </a>
         </div>
       </div>
     </div>
